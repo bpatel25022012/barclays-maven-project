@@ -5,6 +5,7 @@ import uk.co.barclays.basepage.BasePage;
 import org.openqa.selenium.Point;
 import org.testng.annotations.BeforeMethod;
 import uk.co.barclays.browserselector.BrowserSelector;
+import uk.co.barclays.loadproperty.LoadProperty;
 
 import java.util.concurrent.TimeUnit;
 
@@ -12,12 +13,14 @@ import java.util.concurrent.TimeUnit;
 Created By Bhavesh
 */public class TestBase extends BasePage {
     BrowserSelector browserSelector = new BrowserSelector();
-    String baseUrl = "https://www.barclays.co.uk/";
+    LoadProperty loadProperty = new LoadProperty();
+    String baseUrl = loadProperty.getProperty("baseUrl");
+    String browser = loadProperty.getProperty("browser");
 
     @BeforeMethod
     public void openBrowser(){
 
-        browserSelector.selectBrowser("chrome");
+        browserSelector.selectBrowser(browser);
         driver.manage().window().setPosition(new Point(-2000, 0));//display into second screen
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
