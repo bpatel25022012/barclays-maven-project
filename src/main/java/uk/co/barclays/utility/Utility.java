@@ -2,13 +2,14 @@ package uk.co.barclays.utility;
 
 
 import org.apache.commons.io.FileUtils;
-import org.junit.Assert;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import uk.co.barclays.basepage.BasePage;
 
 import java.awt.*;
@@ -98,6 +99,26 @@ public class Utility extends BasePage {
 
         driver.findElement(by).click();
     }
+    /**
+     * This method will click on element
+     */
+    public void clickOnElement(WebElement element) {
+        element.click();
+    }
+
+
+    /**
+     * This method will send text on element
+     */
+
+
+    public String getTextFromElement(WebElement element) {
+        return element.getText();
+    }
+    public void sendTextToElement(WebElement element, String str) {
+        element.sendKeys(str);
+    }
+
 
     // this method will click on send text on element
 

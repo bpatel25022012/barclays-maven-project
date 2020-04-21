@@ -1,0 +1,3 @@
+2020-04-19 08:04:946 INFO  BrowserSelector :20 - Launching Chrome Browser
+2020-04-19 08:04:892 INFO  HomePage :30 - clicking on login button : Proxy element for: DefaultElementLocator 'By.xpath: //a[@class='login btn btn-primary btn-sm']'
+2020-04-19 08:04:968 INFO  LoginPage :26 - Getting text from [[ChromeDriver: chrome on WINDOWS (3d0fa8542fd8ca45dda88606207278ac)] -> xpath: //strong[contains(text(),'Quick, safe and convenient')]]

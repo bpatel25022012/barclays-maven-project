@@ -17,7 +17,7 @@ Created By Bhavesh
     String baseUrl = loadProperty.getProperty("baseUrl");
     String browser = loadProperty.getProperty("browser");
 
-    @BeforeMethod
+    @BeforeMethod (groups = "regression")
     public void openBrowser(){
 
         browserSelector.selectBrowser(browser);
@@ -28,7 +28,7 @@ Created By Bhavesh
         driver.get(baseUrl);
     }
 
-    @AfterMethod
+    @AfterMethod (groups = "regression")
     public void tearDown() {
         driver.quit();
     }
